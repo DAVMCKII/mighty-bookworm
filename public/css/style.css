@@ -8,7 +8,16 @@ body {
     color: #5a5a5a;
   }
   
-  
+  .hero
+  {
+      background-image: url("../images/throughshelf.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-position: 80%;
+      width: 100%;
+      z-index: 9999;
+  }
   
   /* Featurettes
   ------------------------- */
