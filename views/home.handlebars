@@ -24,7 +24,7 @@
                 Register
               </a>
             </p>
-            
+
             <input type="username" class="form-control" id="floatingInput" placeholder="@username">
             <label for="floatingInput">Username</label>
           </div>
@@ -41,6 +41,39 @@
   </div>
 </div>
 <!--Hero End-->
+
+<!--Modal for Sign Up-->
+<div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modle-content">
+        <div class="modal-body">     
+          <form class="p-4 p-md-5 border rounded-3 bg-light">
+              <h1>Register</h1>
+              <p class="smallFont">Already Have An Account ?
+              <a class=" text-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Login
+              </a>
+              </p>
+              <div class="form-floating mb-3">
+                <input type="username" class="form-control" id="floatingInput" placeholder="@username">
+                <label for="floatingInput">Username</label>
+              </div>
+              <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <label for="floatingPassword">Password</label>
+              </div>
+              <!--Register Button-->
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Register </button>
+              </form>
+              </div>
+              <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+</div>
+
 <div class="container About-Us">
 
   <!-- START THE FEATURETTES: Code Sourced from Bootstrap Example Code -->
