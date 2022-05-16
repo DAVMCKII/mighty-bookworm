@@ -4,12 +4,14 @@ const Book = require('./Book');
 
 
 User.hasMany(Book, {
-  foreignKey: 'user_id'
+  foreignKey: 'user_id',
+  constraints:'FALSE'
 });
 
 Book.belongsTo(User, {
   foreignKey: 'user_id',
-  onDelete:'SET NULL'
+  onDelete:'SET NULL',
+  constraints:'FALSE'
 });
 
 
