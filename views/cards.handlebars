@@ -1,9 +1,15 @@
-<div class="card" style="width: 18rem;">
+<div class="container align-content-center mt-5">
+    <!--Card Styling-->
+    <div class="card  text-center p-3 mb-5 border-black rounded-3 " style=" width: 18rem; background:
+        #ADA996; /* fallback for old browsers */ background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB,
+        #F2F2F2, #ADA996); /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(to right, #EAEAEA, #DBDBDB,
+        #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ ">
     {{#each cards as |card|}}
-    <img src="..." class="card-img-top" alt="...">
+    <img src="/images/booknladder.jpg" class="card-img-top align-content-center" width="100" height="100" alt="bookshelf behind a sprial ladder">
     <div class="card-body">
-        <h5 class="title card-title">{{Book Name}}</h5>
-    
+        <h2 class="title card-title text-black fw-bolder">{{Book Name}}</h2>
+        <p class="summary card-text">
+                {{Book.Summary}}
         </p>
     </div>
     <ul class="list-group list-group-flush">
@@ -14,4 +20,5 @@
         <li class="list-group-item">ISBN:  {{ISBN}}</li>
     </ul>
 {{/each}}
+</div>
 </div>
