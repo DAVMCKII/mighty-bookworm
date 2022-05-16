@@ -1,19 +1,21 @@
 
 
-var test = document.querySelector("#test")
+var search = document.querySelector("#search-button")
 
 
 function getApi() { 
-    console.log("hello")
+    var author =$("#author-value").val();
+var title = $("#title-value").val();
     
-    fetch("https://www.googleapis.com/books/v1/volumes?q=sun-tzu+intitle:art-of-war")
+    fetch("https://www.googleapis.com/books/v1/volumes?q="+author+"intitle:"+title)
+    
   .then(function(res) {
     return res.json();
 })
 .then(function(result){
 
-    console.log(result)
+    console.log(result.items[0])
 })
 }
 
-test.addEventListener("click", getApi)
+search.addEventListener("click", getApi)

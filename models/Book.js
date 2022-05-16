@@ -23,6 +23,12 @@ Book.init(
       
     },
 
+    genre:{
+      type: DataTypes.STRING,
+      allowNull: false
+
+    },
+
     author: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -41,12 +47,21 @@ Book.init(
         allowNull: false,
         unique: true
 
-    }  
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'user',
+        key: 'id'
+      }  
+    },
+ 
 },
  {
     sequelize,
-    timestamps: false,
     freezeTableName: true,
+    timestamps: false,
     underscored: true,
     modelName: 'book'
   }
