@@ -5,15 +5,26 @@
   <div class="container col-xl-10 col-xxl-8 px-4 py-5">
     <div class="row align-items-center g-lg-5 py-5">
       <div class="col-lg-7 text-center text-lg-start">
-        <h1 class="display-4 fw-bold lh-1 mb-3">Welcome to The Mighty Bookworm</h1>
-        <p class="col-lg-10 fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt distinctio soluta
-          quam delectus facere magni error doloremque quo, totam, sequi debitis vero, atque laudantium esse architecto
-          sunt sit dolorem? Reiciendis?</p>
+        <h1 class="text-white display-4 fw-bold lh-1 mb-3">Welcome to The Mighty Bookworm</h1>
+         
       </div>
+
       <!--Login Form-->
       <div class="col-md-10 mx-auto col-lg-5">
-        <form class="p-4 p-md-5 border rounded-3 bg-light">
-          <div class="form-floating mb-3">
+        <form class="p-4 p-md-5 border rounded-3">
+          <div class="form-floating mb-3"
+          style="background: #ADA996; /*In case browser is older: Fallback*/
+          background:-webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /*Chrome 10-25, Safari 5.1.6*/
+          background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);"
+          >
+
+            <h1 class="text-black"> Login </h1>
+            <p class="small-font"> Don't Have An Account ? 
+              <a class="text-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Register
+              </a>
+            </p>
+            
             <input type="username" class="form-control" id="floatingInput" placeholder="@username">
             <label for="floatingInput">Username</label>
           </div>
