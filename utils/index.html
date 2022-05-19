@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <!--Stylesheet-->
-        <link href="./css/style.css" rel="stylesheet">
+        <link href="../public/css/style.css" rel="stylesheet">
         <title>Mighty Bookworm</title>
 </head>
      <body>
@@ -45,17 +45,19 @@
             <div class="card" style="width: 18rem;">
                 <!-- <img src="..." class="card-img-top" alt="..."> -->
                 <div class="card-body">
-                  <h5 class="title card-title">Book Name <input type="text" id="title"></h5>
+                  <h5 class="title card-title">Book Name <p type="text" id="title"></p></h5>
                     
                 </div>
                 <ul class="list-group list-group-flush">
                   
-                   <li class="list-group-item">Subtitle: <br><input type="text" id="subtitle"></li>
-                    <li class="list-group-item">Genre: <br><input type="text" id="genre"></li>
-                    <li class="list-group-item"> Author:<br><input type="text" id="author"></li>
-                    <li class="list-group-item">Page Count: <br><input type="text" id="page-count"> </li>
-                    <li class="list-group-item">ISBN:  <br><input type="text" id="isbn"></li>
+                   <li class="list-group-item">Subtitle: <br><p type="text" id="subtitle"></p></li>
+                    <li class="list-group-item">Genre: <br><p type="text" id="genre"></p></li>
+                    <li class="list-group-item"> Author:<br><p type="text" id="author"></p></li>
+                    <li class="list-group-item">Page Count: <br><p type="text" id="page-count"> </p></li>
+                    <li class="list-group-item">Description:  <br><p type="text" id="description"></p></li>
                             </ul>
+
+                           <button id="new-book" class="w-100 btn btn-lg btn-primary"  type="button">Add Book</button>
                 
               </div>
           </section>
@@ -75,7 +77,7 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Date Completed: </li>
                 <li class="list-group-item">Page Count: </li>
-                <li class="list-group-item">ISBN: </li>
+                <li class="list-group-item">description: </li>
               </ul>
               
             </div>
@@ -84,6 +86,6 @@
 
         </body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-          <script src="/public/js/fetch-api.js"></script>
+          <script src="../public/js/add-book.js"></script>
           
 </html>

@@ -42,8 +42,9 @@ Book.init(
 
 
     },
-    isbn:{
+    description:{
         type: DataTypes.STRING,
+        length: 5000,
         allowNull: false,
         unique: true
 

@@ -5,14 +5,14 @@ const { User, Book } = require('../../models');
 // SET UP POST ROUTE TO ADD BOOK TO DATABASE TO DATABASE
 
 router.post('/', (req, res) => {
-
+console.log(req.body)
     Book.create({
         title: req.body.title,
         subtitle: req.body.subtitle,
         genre: req.body.genre,
         author: req.body.author,
         page_count: req.body.page_count,
-        isbn: req.body.isbn
+        description: req.body.description
         })
         .then(dbBookData => res.json(dbBookData))
         .catch(err => {
@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
      'genre',
      'author',
      'page_count',
-      'isbn'],
+      'description'],
  include: [
       {
         model: User,
@@ -52,7 +52,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   Book.findOne({
 
-     attributes: ['id', 'title', 'subtitle','genre', 'author', 'page_count', 'isbn'],
+     attributes: ['id', 'title', 'subtitle','genre', 'author', 'page_count', 'description'],
 
       where: {
       id: req.params.id
