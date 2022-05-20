@@ -12,26 +12,26 @@ Book.init(
       primaryKey: true,
       autoIncrement: true
     },
-    title: {
+    bookTitle: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
-    subtitle: {
+    bookSubtitle: {
       type: DataTypes.STRING,
       allowNull: true,
       
       
     },
 
-    genre:{
+    bookGenre:{
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
 
     },
 
-    author: {
+    bookAuthor: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
 
 
 
@@ -42,11 +42,10 @@ Book.init(
 
 
     },
-    description:{
-        type: DataTypes.STRING,
-        length: 5000,
+    bookDescription:{
+        type: DataTypes.STRING(10000),
         allowNull: false,
-        unique: true
+        
 
     },
     user_id: {

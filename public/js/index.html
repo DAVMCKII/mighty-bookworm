@@ -1,7 +1,4 @@
-
-
-
-  <body class="hero">
+<body class="hero">
        <!--Hero and Login Form: Bootstrap-->
        <div >
            <div class="container col-xl-10 col-xxl-8 px-4 py-5">
@@ -18,18 +15,18 @@
                10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ ">
                                <h3  class="text-black fw-bold text-center mb-2">Search Here</h3>
                            <div class="form-floating mb-3">
-                               <input type="author" class="form-control"  id="author-value"
+                               <input type="author" class="form-control" id="floatingInput"
                                    placeholder="Enter Author Name">
-                               <label for="floatingInput">  Author</label>
+                               <label for="floatingInput">Author</label>
                            </div>
                            <div class="form-floating mb-3">
-                               <input type="title" class="form-control" id = "title-value" placeholder="Book Title">
+                               <input type="title" class="form-control" id="floatingInput" placeholder="Book Title">
                                <label for="floatingInput">Title</label>
                            </div>
-                         <!--Search Button-->
-                       <button id="search-button" class="w-100 btn btn-lg btn-primary"  type="button">Search</button> 
+                           <!--Search Button-->
+                           <button class="w-100 btn btn-lg btn-primary" type="submit">Search</button>
                        </form>
-                    /div>
+                   </div>
                    <!--Form Div End-->
                </div>
            </div>
@@ -40,8 +37,10 @@
                 <div class=" text-center card-body ">
                     <h1 class="display-4 fw-bold lh-1 mb-3 text-white card-header text-center">Search Results</h1>
                 
-                <div class="card-body">
-                  <h5 class="title card-title">Book Name <p type="text" id="title"></p></h5>
+                    <div >
+                        <!-- <img src="..."  alt="..."> -->
+                        <div >
+                              <h5 class="title card-title">Book Name <p type="text" id="title"></p></h5>
                     
                 </div>
                 <ul class="list-group list-group-flush">
@@ -55,34 +54,32 @@
 
                            <button id="new-book" class="w-100 btn btn-lg btn-primary"  type="button">Add Book</button>
                 
-              </div>
-          </section>
-          <section  class="libary-display">
-            <div class="col-lg-7 text-center text-lg-start">
-              <h1 class="display-4 fw-bold text-white lh-1 mb-3">My Collection</h1>
-              <p class="col-lg-10 fs-4 text-white fw-bold">Book's that you have added to your personal collection and information about them.</p>
             </div>
-            <div class="card" style="width: 18rem;">
-              <!-- <img src="..." class="card-img-top" alt="..."> -->
-              <div class="card-body">
-                <h5 class="title card-title">Book Name</h5>
-                  <p class="summary card-text">
-                      Summary: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint expedita ipsum cumque illum similique! Repudiandae animi saepe ipsa, sapiente ab, esse aliquam quod magni nostrum, natus atque hic odio dolores.
-                  </p> 
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Date Completed: </li>
-                <li class="list-group-item">Page Count: </li>
-                <li class="list-group-item">description: </li>
-              </ul>
-              
-            </div>
+            </section>
+            <section class="libary-display card text-center bg-black p-5 text-white" >
+                <div class="text-center text-lg-start card-body ">
+                        <h1 class="display-4 fw-bold lh-1 mb-3 mt-4  text-center">My Collection</h1>
+                        <p class=" fs-4">Book's that you have added to your personal collection and information about
+                            them.</p>
+                
+                    <div  style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div >
+                            <h5 class="title card-title">Book Name</h5>
+                            <p class="summary card-text">
+                                Summary: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint expedita ipsum cumque
+                                illum similique! Repudiandae animi saepe ipsa, sapiente ab, esse aliquam quod magni nostrum,
+                                natus atque hic odio dolores.
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Date Completed: </li>
+                            <li class="list-group-item">Page Count: </li>
+                            <li class="list-group-item">ISBN: </li>
+                        </ul>
 
-          </section>
-
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-          <script src="/js/add-book.js"></script>
-          
-
-
+                </div>
+                 </div>
+            </section>
+       </div>
+ </body>

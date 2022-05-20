@@ -7,12 +7,12 @@ const { User, Book } = require('../../models');
 router.post('/', (req, res) => {
 console.log(req.body)
     Book.create({
-        title: req.body.title,
-        subtitle: req.body.subtitle,
-        genre: req.body.genre,
-        author: req.body.author,
+        bookTitle: req.body.bookTitle,
+        bookSubtitle: req.body.bookSubtitle,
+        bookGenre: req.body.bookGenre,
+        bookAuthor: req.body.bookAuthor,
         page_count: req.body.page_count,
-        description: req.body.description
+        bookDescription: req.body.bookDescription
         })
         .then(dbBookData => res.json(dbBookData))
         .catch(err => {
@@ -27,12 +27,12 @@ router.get('/', (req, res) => {
   
   Book.findAll({
      attributes: ['id', 
-     'title',
-     'subtitle', 
-     'genre',
-     'author',
+     'bookTitle',
+     'bookSubtitle', 
+     'bookGenre',
+     'bookAuthor',
      'page_count',
-      'description'],
+      'bookDescription'],
  include: [
       {
         model: User,
@@ -52,7 +52,13 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   Book.findOne({
 
-     attributes: ['id', 'title', 'subtitle','genre', 'author', 'page_count', 'description'],
+     attributes: ['id', 
+     'bookTitle',
+     'bookSubtitle', 
+     'bookGenre',
+     'bookAuthor',
+     'page_count',
+      'bookDescription'],
 
       where: {
       id: req.params.id
